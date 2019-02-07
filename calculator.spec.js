@@ -2,7 +2,6 @@ describe('calculator.js',function(){
 
     xit('should add numbers to total', function(){
         //TODO: Expectations
-        //expect 5+5 to be 10
         const calculator = new Calculator();
         calculator.add(5);
 
