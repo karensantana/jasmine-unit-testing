@@ -73,4 +73,17 @@ describe('calculator.js',function(){
         expect(function(){ calculator.divide(0)}).toThrowError(Error);
         expect(function(){ calculator.divide(0)}).toThrowError(Error, 'Can not divide by zero!');
     });
+
+    it('can be instantiated', function(){
+        const calculator = new Calculator();
+
+        expect(calculator).toBeCalculator();
+    });
+    it('returns total', function(){
+        const calculator = new Calculator();
+        calculator.total = 50;
+
+        expect(calculator.add(20)).toBe(70);
+        expect(calculator.total).toMatch(/-?\d+/);
+    });
 });
