@@ -57,4 +57,20 @@ describe('calculator.js',function(){
         expect(calculator.multiply).toBeDefined();
         expect(calculator.divide).toBeDefined();
     });
+
+    it('does not handle NaN', function(){
+        const calculator = new Calculator();
+        calculator.total = 20;
+        calculator.multiply('a');
+
+       expect(calculator.total).toBeNaN(); 
+    });
+
+    it('handles divide by zero', function(){
+        const calculator = new Calculator();
+
+        expect(function(){ calculator.divide(0)}).toThrow();
+        expect(function(){ calculator.divide(0)}).toThrowError(Error);
+        expect(function(){ calculator.divide(0)}).toThrowError(Error, 'Can not divide by zero!');
+    });
 });
