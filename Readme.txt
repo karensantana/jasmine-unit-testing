@@ -27,4 +27,18 @@ You define a single Expectation with:
 
     You can also disable the suit: All specs within the disabled suite will be marked as pending.
 
+------------------------------------------------------------------------------------------------------
+    Matchers
+
+    A matcher it is just a funtion.
+    Implements a boolean comparison between the actual value and the expected value.
+    -->boolean comparison: true / false.
+    -> actual value with the expected value.
+
+    *A matcher is responsible for reporting to jasmine if the expectation is true or false. -> passing or failing Spec.
+    https://jasmine.github.io/api/3.3/matchers.html
+
+    **When you are working with two objects, arrays they are compare by reference, so you need a deep comparison in your spec to check if they are equal.
+
+
 

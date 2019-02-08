@@ -1,6 +1,6 @@
 describe('calculator.js',function(){
 
-    xit('should add numbers to total', function(){
+    it('should add numbers to total', function(){
         //TODO: Expectations
         const calculator = new Calculator();
         calculator.add(5);
@@ -34,4 +34,27 @@ describe('calculator.js',function(){
         
         expect(calculator.total).toBe(2);
     })
+
+    it('should initialize the total', function(){
+        const calculator = new Calculator();
+
+        expect(calculator.total).toBeFalsy();
+        expect(calculator.total).toBe(0);
+    });
+
+    it('has constructor', function(){
+        const calculator = new Calculator();
+        const calculator2 = new Calculator();
+
+        expect(calculator).toEqual(calculator2);
+    });
+
+    it('has common operations', function(){
+        const calculator = new Calculator();
+
+        expect(calculator.add).toBeDefined();
+        expect(calculator.subtract).toBeDefined();
+        expect(calculator.multiply).toBeDefined();
+        expect(calculator.divide).toBeDefined();
+    });
 });
