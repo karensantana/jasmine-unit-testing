@@ -1,23 +1,28 @@
 describe('calculator.js',function(){
     describe('Calculator', function(){
+        let calculator;
+        let calculator2;
+
+        beforeEach(function(){
+           //Anything inside this block executes before each spec inside this describe Calculator
+           calculator = new Calculator();
+           calculator2 = new Calculator();
+
+        });
+
         //Add method
         it('should initialize the total', function(){
-            const calculator = new Calculator();
-    
             expect(calculator.total).toBeFalsy();
             expect(calculator.total).toBe(0);
         });
     
         it('has constructor', function(){
-            const calculator = new Calculator();
-            const calculator2 = new Calculator();
     
             expect(calculator).toEqual(calculator2);
         });
     
         it('has common operations', function(){
-            const calculator = new Calculator();
-    
+          
             expect(calculator.add).toBeDefined();
             expect(calculator.subtract).toBeDefined();
             expect(calculator.multiply).toBeDefined();
@@ -26,7 +31,6 @@ describe('calculator.js',function(){
 
         it('can be instantiated', function(){
             jasmine.addMatchers(customMatchers);
-            const calculator = new Calculator();
     
             expect(calculator).toBeCalculator();
         });
@@ -34,15 +38,12 @@ describe('calculator.js',function(){
         describe('add()', function(){
 
             it('should add numbers to total', function(){
-                
-                const calculator = new Calculator();
                 calculator.add(5);
         
                 expect(calculator.total).toBe(5); //expected value
             });
 
             it('returns total', function(){
-                const calculator = new Calculator();
                 calculator.total = 50;
         
                 expect(calculator.add(20)).toBe(70);
@@ -53,8 +54,6 @@ describe('calculator.js',function(){
         //Subtrac method
         describe('subtract()', function(){
             it('should subtract numbers from total', function(){
-                
-                const calculator = new Calculator();
                 calculator.total = 30;
                 calculator.subtract(5);
         
@@ -65,8 +64,6 @@ describe('calculator.js',function(){
         //Multiply method
         describe('multiply()', function(){
             it('should multiply total by number', function(){
-                //TODO: Expectations
-                const calculator = new Calculator();
                 calculator.total = 10;
                 calculator.multiply(2);
         
@@ -74,7 +71,6 @@ describe('calculator.js',function(){
             });
 
             it('does not handle NaN', function(){
-                const calculator = new Calculator();
                 calculator.total = 20;
                 calculator.multiply('a');
         
@@ -85,8 +81,6 @@ describe('calculator.js',function(){
         //Divide method
         describe('divide()', function(){
             it('should divide total by number', function(){
-                //TODO: Expectations
-                const calculator = new Calculator();
                 calculator.total = 20;
                 calculator.divide(10);
                 
@@ -94,7 +88,6 @@ describe('calculator.js',function(){
             });
 
             it('handles divide by zero', function(){
-                const calculator = new Calculator();
         
                 expect(function(){ calculator.divide(0)}).toThrow();
                 expect(function(){ calculator.divide(0)}).toThrowError(Error);

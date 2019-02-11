@@ -54,6 +54,8 @@ You define a single Expectation with:
 
     *By nesting suites
 
+    // The spec testing Lifecycle
+
     Setup and Teardown
 
         Setup --> Where you place prerequisites for your specs.
@@ -65,6 +67,19 @@ You define a single Expectation with:
             ---> It executes after specs are run.
             afterEach --> Executed after every single specs (it) in the suite (describe) in which it is called.
             afterAll --> Executed just ONCE after all specs.
+
+            Executed in time clock
+
+            Describe () //Example with two specs (by me).
+
+            1--beforeAll()
+            2--beforeEach()
+            3-It()
+            4--afterEach()
+            5--beforeEach()
+            6--It()
+            7--afterEach()
+            8--afterAll()
 
 
 
