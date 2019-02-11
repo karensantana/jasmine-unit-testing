@@ -75,6 +75,7 @@ describe('calculator.js',function(){
     });
 
     it('can be instantiated', function(){
+        jasmine.addMatchers(customMatchers);
         const calculator = new Calculator();
 
         expect(calculator).toBeCalculator();
