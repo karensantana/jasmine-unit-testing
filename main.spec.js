@@ -16,13 +16,12 @@ describe('main.js', function(){
             element.setAttribute('id', 'result');
             document.body.appendChild(element);
         });
-        
+
         afterAll(function(){
             element = document.getElementById('result'); //Clean up to remove the element from the spec runner html
             document.body.removeChild(element);
         });
         it('adds result to DOM', function(){
-           
            updateResult("5");
 
            expect(element.innerText).toBe("5");
