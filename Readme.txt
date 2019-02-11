@@ -40,5 +40,33 @@ You define a single Expectation with:
 
     **When you are working with two objects, arrays they are compare by reference, so you need a deep comparison in your spec to check if they are equal.
 
+    ----------------------------------------------------------------------------------------------------
+
+    Organizing your specs
+
+    *describe --> helps you keep your specs organized
+
+    *Through naming conventions
+        -Create a spec file with the same name that matches the source file you are unit Testing
+        calculator.js --> calculator.spec.js
+
+    *Keep the folder structure:
+
+    *By nesting suites
+
+    Setup and Teardown
+
+        Setup --> Where you place prerequisites for your specs.
+            ----> It executes before specs are run.
+            beforeEach --> Executed before each spec (it) in the suite (describe) in which it is called.
+            beforeAll --> Executed ONCE before all the specs (it) in the suite (describe) in which it is called.
+
+    Teardown --> Clean up steps for your specs.
+            ---> It executes after specs are run.
+            afterEach --> Executed after every single specs (it) in the suite (describe) in which it is called.
+            afterAll --> Executed just ONCE after all specs.
+
+
+
 
 
