@@ -9,8 +9,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" >
     <script src="main.js"></script>
     <script src="lib/boot.js"></script>
-
     <script src="calculator.js"></script>
+    <script> 
+        window.onload = function(){
+            showVersion();
+        }
+    </script>
     
 </head>
 <body class="body">
@@ -23,5 +27,6 @@
                 </div>
                 <span id="result"></span>
             </div>
+        <div class="version">Version <span id="version"></span></div>
 </body>
 </html>

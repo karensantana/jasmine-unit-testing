@@ -82,6 +82,23 @@ You define a single Expectation with:
             8--afterAll()
 
 
+        Spys-----------
+
+        What is a Spy? 
+        Spies create test doubles and help us isolate dependencies for true unit testing.
+        *A test double is an object that can stand in for a real object in a tes, similar to how a stunt double stands in for an actor in a movie.
+
+        -Jasmine has test double functions called spies.
+        -A spy can stub any function and tracks calls to it and all arguments.
+        -A Spy only exists in the describe or it block in which it is defined, and will be removed after each spec.
+
+        There are special matchers for interacting with spies:
+                -toHaveBeenCalled
+                -to toHaveBeenCalledWith
+                -toHaveBeenCallTimes
+
+
+
 
 
 
